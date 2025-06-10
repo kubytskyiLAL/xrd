@@ -74,15 +74,15 @@ R = np.sqrt(Y**2 + Z**2)
 theta_pix = np.arctan2(R, sd)
 q_pix = (4*np.pi/lam) * np.sin(theta_pix)          # Å⁻¹
 
-sigma = 0.002
+sigma = 0.012
 n_max = int(qmax / q0) + 2
 I = np.zeros_like(q_pix)
 for n in range(1, n_max + 1):
     I += (1/n**2) * np.exp(-0.5*((q_pix - n*q0)/sigma)**2)
 
 I *= 1e4
-#I += np.random.poisson(10, I.shape)
-#I = gaussian_filter(I, sigma=1)
+I += np.random.poisson(10, I.shape)
+I = gaussian_filter(I, sigma=1)
 
 # what the user sees
 I_plot  = np.log10(I + 1) if log_int else I
