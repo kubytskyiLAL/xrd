@@ -81,7 +81,7 @@ for n in range(1, n_max + 1):
     I += (1/n**2) * np.exp(-0.5*((q_pix - n*q0)/sigma)**2)
 
 I *= 1e4
-I += np.random.poisson(10, I.shape)
+#I += np.random.poisson(10, I.shape)
 #I = gaussian_filter(I, sigma=1)
 
 # what the user sees
