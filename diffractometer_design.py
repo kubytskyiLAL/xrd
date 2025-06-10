@@ -82,7 +82,7 @@ for n in range(1, n_max + 1):
 
 I *= 1e4
 I += np.random.poisson(10, I.shape)
-I = gaussian_filter(I, sigma=1)
+#I = gaussian_filter(I, sigma=1)
 
 # what the user sees
 I_plot  = np.log10(I + 1) if log_int else I
