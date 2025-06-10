@@ -74,7 +74,7 @@ R = np.sqrt(Y**2 + Z**2)
 theta_pix = np.arctan2(R, sd)
 q_pix = (4*np.pi/lam) * np.sin(theta_pix)          # Å⁻¹
 
-sigma = 0.012
+sigma = 0.002
 n_max = int(qmax / q0) + 2
 I = np.zeros_like(q_pix)
 for n in range(1, n_max + 1):
