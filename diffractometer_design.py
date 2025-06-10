@@ -112,7 +112,7 @@ with col_wedge:
 
     deg = np.degrees
     fig_w.add_annotation(x=sd*0.55, y=y_top*0.55,
-                         text=f"2θₘₐₓ ≈ {deg(2*theta_top):.2f}°", showarrow=False)
+                         text=f"2θₘₐₓ ≈ {deg(theta_top):.2f}°", showarrow=False)
     fig_w.add_annotation(x=sd*0.55, y=y_bot*0.55,
                          text=f"2θₘᵢₙ ≈ {deg(2*theta_bot):.2f}°", showarrow=False)
 
