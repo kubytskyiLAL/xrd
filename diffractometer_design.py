@@ -71,7 +71,7 @@ y_mm = np.linspace(-half + y_off, half + y_off, det_pix)
 z_mm = np.linspace(-half,            half,      det_pix)
 Y, Z = np.meshgrid(y_mm, z_mm, indexing="ij")
 R = np.sqrt(Y**2 + Z**2)
-theta_pix = np.arctan2(R, sd)
+theta_pix = 0.5*np.arctan2(R, sd)
 q_pix = (4*np.pi/lam) * np.sin(theta_pix)          # Å⁻¹
 
 sigma = 0.002
