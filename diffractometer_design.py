@@ -57,8 +57,8 @@ with st.sidebar:
 half = det_side / 2
 y_top, y_bot = half + y_off, -half + y_off
 
-theta_top = np.arctan2(abs(y_top), sd)
-theta_bot = np.arctan2(abs(y_bot), sd)
+theta_top = 0.5*np.arctan2(abs(y_top), sd)
+theta_bot = 0.5*np.arctan2(abs(y_bot), sd)
 q_top, q_bot = (4*np.pi/lam)*np.sin(theta_top), (4*np.pi/lam)*np.sin(theta_bot)
 qmin, qmax = min(q_top, q_bot), max(q_top, q_bot)
 
