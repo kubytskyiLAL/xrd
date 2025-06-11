@@ -183,8 +183,8 @@ f"""
 | q₀ = 2π/d | **{q0_nm:.4f} nm⁻¹** |
 """, unsafe_allow_html=True)
 
-centre_row = I[I.shape[0]//2]
-q_line_nm  = q_pix[q_pix.shape[0]//2] * Q_TO_NM
+centre_row = I[:, I.shape[1] // 2] #I[I.shape[0]//2]
+q_line_nm  = q_pix[:, q_pix.shape[1]//2] * Q_TO_NM
 
 fig1d = go.Figure(go.Scatter(x=q_line_nm, y=centre_row, mode="lines"))
 fig1d.update_layout(
